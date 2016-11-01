@@ -1,0 +1,24 @@
+{
+  "name": "multiBundleBrows",
+  "version": "1.0.0",
+  "description": "Multiple bundles with Browserify and Gulp",
+  "main": "index.js",
+  "author": "Pipa",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "path": "^0.12.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
