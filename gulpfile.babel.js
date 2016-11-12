@@ -17,7 +17,7 @@
 // Setting internals ============================
     const internals = {
         isWatchify: false,
-        deps: [] // Here would go global modules such as react. E.G.: ['react', 'react-dom']
+        deps: [] // Here would go global modules. E.G.: ['react', 'react-dom']
     };
     internals.static = __dirname + '/static';
     internals.src = internals.static + '/src';
@@ -52,16 +52,15 @@
                 .on('error', gutil.log.bind(gutil, 'Browserify Error'))
                 .pipe(source(options.output))
                 .pipe(buffer())
-                // .pipe(sourcemaps.init({ loadMaps: true }))
-                // .pipe(gulpif(options.min, uglify(), gutil.noop()))
-                // .pipe(sourcemaps.write('../../maps'))
+                .pipe(sourcemaps.init({ loadMaps: true }))
+                .pipe(sourcemaps.write('./maps'))
                 .pipe(gulp.dest(options.destination));
         };
 
         if (internals.isWatchify) {
             b = watchify(b);
-            b.on('update', function(id) {
-                console.log(id);
+            b.on('update', (id) => {
+
                 lint(callback, id);
                 rebundle();
             });
