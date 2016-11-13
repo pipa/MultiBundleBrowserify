@@ -1,5 +1,13 @@
-# MultiBundleBrowserify
+#Gulp Multi-Bundles with Browserify
 
-A gulp recipe to create multiple bundles with Browserify, ESLint to get a standardized codebase and Watchify to watch all dependencies changes.
+This is the code for this blog-post: [Gulp Multiple Bundles of Browserify](http://luismatute.me/multi-bundle-browserify-using-gulp/)
 
-This repo is used to show some code of what I'm trying to explain in [my blog post](http://).
+##How to setup?
+
+You should have a current version of node installed and a local RethinkDB server running. Now just clone the repository and execute these commands:
+
+```
+npm install -g gulp
+npm install
+gulp
+```
